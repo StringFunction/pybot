@@ -23,37 +23,37 @@ const benefits = [
   }
 ];
 
-export const BenefitsSection = () => {
-  return (
-    <section className="py-24 px-4 bg-gradient-secondary">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Por que Escolher o PyBot?
-          </h2>
-          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-            Resultados comprovados que transformam negócios
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {benefits.map((benefit, index) => (
-            <Card 
-              key={index}
-              className="p-8 text-center bg-background/10 backdrop-blur-md border-foreground/20 hover:bg-background/20 transition-all duration-300"
-            >
-              <div className="text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-                {benefit.stat}
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">
-                {benefit.label}
-              </h3>
-              <p className="text-foreground/70">
-                {benefit.description}
-              </p>
-            </Card>
-          ))}
-        </div>
+export const BeneficiosSection = () => {
+    return (
+      <section className="py-24 px-4 bg-gradient-secondary">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Por que Escolher o PyBot?
+            </h2>
+            <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
+              Resultados comprovados que transformam negócios
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {benefits.map((benefit, index) => (
+              <Card 
+                key={index}
+                className="p-8 text-center bg-background/10 backdrop-blur-md border-foreground/20 hover:bg-background/20 transition-all duration-300"
+              >
+                <div className="text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
+                  {benefit.stat}
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  {benefit.label}
+                </h3>
+                <p className="text-foreground/70">
+                  {benefit.description}
+                </p>
+              </Card>
+            ))}
+          </div>
         
         <div className="bg-background/10 backdrop-blur-md rounded-2xl p-12 border border-foreground/20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

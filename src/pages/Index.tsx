@@ -1,15 +1,16 @@
 import { HeroSection } from "@/components/ui/hero-section";
-import { ServicesSection } from "@/components/ui/services-section";
-import { BenefitsSection } from "@/components/ui/benefits-section";
-import { ContactSection } from "@/components/ui/contact-section";
+import { ServicoSection } from "@/components/ui/servicos-section";
+import { BeneficiosSection } from "@/components/ui/beneficios-section";
+import { ContatoSection } from "@/components/ui/contato-section";
+import { EmpresaSection } from "@/components/ui/empresa-section";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen font-boa">
       <HeroSection />
-      <ServicesSection />
-      <BenefitsSection />
-      <ContactSection />
+      <ServicoSection />
+      <BeneficiosSection />
+      <ContatoSection />
     </div>
   );
 };

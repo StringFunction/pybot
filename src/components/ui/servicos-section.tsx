@@ -40,7 +40,7 @@ const services = [
   }
 ];
 
-export const ServicesSection = () => {
+export const ServicoSection = () => {
   return (
     <section className="py-24 px-4 bg-background">
       <div className="max-w-7xl mx-auto">

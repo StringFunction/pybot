@@ -22,8 +22,8 @@ export const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-6xl md:text-8xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-6 animate-pulse-glow">
-            PyBot
+          <h1 className="text-6xl md:text-8xl font-titulo bg-gradient-primary bg-clip-text text-transparent mb-6  p-5">
+            Pybot
           </h1>
           <p className="text-2xl md:text-3xl text-foreground/90 mb-4 font-light">
             Automação Robótica de Processos

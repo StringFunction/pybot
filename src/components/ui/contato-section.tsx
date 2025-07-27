@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 
-export const ContactSection = () => {
+export const ContatoSection = () => {
   return (
     <section className="py-24 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
@@ -62,7 +62,7 @@ export const ContactSection = () => {
                   Telefone
                 </label>
                 <Input 
-                  placeholder="(11) 99999-9999" 
+                  placeholder="(85) 99999-9999" 
                   className="bg-background/50 border-border/50 focus:border-primary"
                 />
               </div>
@@ -113,7 +113,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Telefone</p>
-                    <p className="text-foreground/80">(11) 9999-9999</p>
+                    <p className="text-foreground/80">(85) 9999-9999</p>
                   </div>
                 </div>
                 
@@ -123,7 +123,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Localização</p>
-                    <p className="text-foreground/80">São Paulo, Brasil</p>
+                    <p className="text-foreground/80">Ceara, Brasil</p>
                   </div>
                 </div>
               </div>

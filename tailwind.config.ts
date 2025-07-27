@@ -74,6 +74,11 @@ export default {
 				'gradient-secondary': 'var(--gradient-secondary)',
 				'gradient-hero': 'var(--gradient-hero)'
 			},
+			fontFamily : {
+				boa : ["Noto Sans JP"],
+				titulo : ["Rajdhani"]
+
+			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
 				'card': 'var(--shadow-card)'
