@@ -3,8 +3,22 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useState } from "react";
+
 
 export const ContatoSection = () => {
+  const [nome, setNome] = useState('');
+  const [empresa, setEmpresa] = useState('');
+  const [email, setEmail] = useState('');
+  const [telefone, setTelefone] = useState('');
+  const [mensagem, setMensagem] = useState('');
+  const EnviarEmail = (e) =>{
+    alert("ola mundo")
+    e.preventDefault();
+    console.log(nome);
+    
+    
+  }
   return (
     <section className="py-24 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
@@ -24,7 +38,7 @@ export const ContatoSection = () => {
               Fale Conosco
             </h3>
             
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={EnviarEmail}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
@@ -33,6 +47,7 @@ export const ContatoSection = () => {
                   <Input 
                     placeholder="Seu nome completo" 
                     className="bg-background/50 border-border/50 focus:border-primary"
+                    onChange={(e) => setNome(e.target.value)}
                   />
                 </div>
                 <div>
@@ -42,6 +57,7 @@ export const ContatoSection = () => {
                   <Input 
                     placeholder="Nome da empresa" 
                     className="bg-background/50 border-border/50 focus:border-primary"
+                    onChange={(e) => setEmpresa(e.target.value)}
                   />
                 </div>
               </div>
@@ -54,6 +70,7 @@ export const ContatoSection = () => {
                   type="email" 
                   placeholder="seu@email.com" 
                   className="bg-background/50 border-border/50 focus:border-primary"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               
@@ -64,6 +81,7 @@ export const ContatoSection = () => {
                 <Input 
                   placeholder="(85) 99999-9999" 
                   className="bg-background/50 border-border/50 focus:border-primary"
+                  onChange={(e) => setTelefone(e.target.value)}
                 />
               </div>
               
@@ -75,6 +93,7 @@ export const ContatoSection = () => {
                   placeholder="Conte-nos sobre seu projeto de automação..."
                   rows={5}
                   className="bg-background/50 border-border/50 focus:border-primary resize-none"
+                  onChange={(e) => setMensagem(e.target.value)}
                 />
               </div>
               
@@ -103,7 +122,7 @@ export const ContatoSection = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">E-mail</p>
-                    <p className="text-foreground/80">contato@pybot.com</p>
+                    <p className="text-foreground/80">pybot.rpa@gmail.com</p>
                   </div>
                 </div>
                 
@@ -113,7 +132,7 @@ export const ContatoSection = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Telefone</p>
-                    <p className="text-foreground/80">(85) 9999-9999</p>
+                    <p className="text-foreground/80">(85) 98530-1701</p>
                   </div>
                 </div>
                 

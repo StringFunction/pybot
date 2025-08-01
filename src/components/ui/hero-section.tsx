@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-automation.jpg";
+import LogoEmpresa from "@/assets/logo_branca_azul.jpg";
 
 export const HeroSection = () => {
   return (
@@ -20,11 +21,13 @@ export const HeroSection = () => {
       <div className="absolute bottom-40 left-20 w-24 h-24 bg-accent/20 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
       
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
+      <div className="relative z-10 text-center px-4 max-w-6xl mx-auto p-72">
+        <div id="imagem_empresa" className="w-[780px] h-24 relative -top-20 flex justify-center items-center bg-transparent">
+          <img src={LogoEmpresa} alt="" className="w-[600px]"/>
+        </div>
         <div className="mb-8">
-          <h1 className="text-6xl md:text-8xl font-titulo bg-gradient-primary bg-clip-text text-transparent mb-6  p-5">
-            Pybot
-          </h1>
+          {/* <h1 className="text-6xl md:text-8xl font-titulo bg-gradient-primary bg-clip-text text-transparent mb-6  p-5">
+          </h1> */}
           <p className="text-2xl md:text-3xl text-foreground/90 mb-4 font-light">
             Automação Robótica de Processos
           </p>
