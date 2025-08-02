@@ -60,7 +60,7 @@ export const ServicoSection = () => {
               className="p-8 bg-card/50 backdrop-blur-sm border-border/50 hover:shadow-card hover:border-primary/30 transition-all duration-300 group"
             >
               <div className="mb-6">
-                <div className="w-16 h-16  bg-teal-500 rounded-lg flex items-center justify-center mb-4 group-hover:animate-pulse-glow transition-all duration-300">
+                <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:animate-pulse-glow transition-all duration-300">
                   <service.icon className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-3">

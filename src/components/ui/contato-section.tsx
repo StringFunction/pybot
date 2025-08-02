@@ -2,8 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Import } from "lucide-react";
 import { useState } from "react";
+import { useRef } from "react";
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 export const ContatoSection = () => {
@@ -12,10 +15,30 @@ export const ContatoSection = () => {
   const [email, setEmail] = useState('');
   const [telefone, setTelefone] = useState('');
   const [mensagem, setMensagem] = useState('');
+
   const EnviarEmail = (e) =>{
-    alert("ola mundo")
+   
     e.preventDefault();
-    console.log(nome);
+    console.log(import.meta.env.VITE_SERVICO_ID_EMAIL);
+    console.log("ola  mudo");
+    
+    const dicionario = {
+      "Empresa" : empresa,
+      "Nome" : nome,
+      "Email" : email,
+      "Telefone" : telefone,
+      "mensagem" : mensagem
+    }
+
+    
+    emailjs.send(import.meta.env.VITE_SERVICO_ID_EMAIL,import.meta.env.VITE_SERVICO_TEMPLATE, dicionario, {
+        publicKey : import.meta.env.VITE_ID
+    }).then(()=>{
+        toast.success("Mensagem enviado com sucesso")
+      
+    }).catch((e)=>{
+      toast.error("Erro ao envia mensagem")
+    })
     
     
   }
@@ -34,7 +57,7 @@ export const ContatoSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50">
-            <h3 className="text-2xl font-semibold text-foreground mb-6">
+            <h3 className="text-2xl font-semibold text-foreground mb-6" id="Contato">
               Fale Conosco
             </h3>
             
@@ -48,6 +71,7 @@ export const ContatoSection = () => {
                     placeholder="Seu nome completo" 
                     className="bg-background/50 border-border/50 focus:border-primary"
                     onChange={(e) => setNome(e.target.value)}
+                    required
                   />
                 </div>
                 <div>
@@ -58,6 +82,7 @@ export const ContatoSection = () => {
                     placeholder="Nome da empresa" 
                     className="bg-background/50 border-border/50 focus:border-primary"
                     onChange={(e) => setEmpresa(e.target.value)}
+                    required
                   />
                 </div>
               </div>
@@ -71,6 +96,7 @@ export const ContatoSection = () => {
                   placeholder="seu@email.com" 
                   className="bg-background/50 border-border/50 focus:border-primary"
                   onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
               </div>
               
@@ -82,6 +108,7 @@ export const ContatoSection = () => {
                   placeholder="(85) 99999-9999" 
                   className="bg-background/50 border-border/50 focus:border-primary"
                   onChange={(e) => setTelefone(e.target.value)}
+                  required
                 />
               </div>
               
@@ -94,6 +121,7 @@ export const ContatoSection = () => {
                   rows={5}
                   className="bg-background/50 border-border/50 focus:border-primary resize-none"
                   onChange={(e) => setMensagem(e.target.value)}
+                  required
                 />
               </div>
               
@@ -167,6 +195,7 @@ export const ContatoSection = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />  
     </section>
   );
 };

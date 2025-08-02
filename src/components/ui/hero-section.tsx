@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-automation.jpg";
 import LogoEmpresa from "@/assets/logo_branca_azul.jpg";
+import { useRef } from "react";
 
 export const HeroSection = () => {
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
       {/* Background Image with Overlay */}
@@ -38,12 +40,15 @@ export const HeroSection = () => {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="#Contato">
           <Button 
             size="lg" 
             className="bg-gradient-primary hover:shadow-glow transition-all duration-300 px-8 py-6 text-lg font-semibold"
           >
             Começar Automação
+
           </Button>
+          </a>
           <Button 
             size="lg" 
             variant="outline" 
